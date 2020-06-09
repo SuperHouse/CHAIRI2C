@@ -1,12 +1,14 @@
 Chair I2C Interface
 ===================
-Copyright 2018-2020 SuperHouse Automation Pty Ltd <www.superhouse.tv>  
+Copyright 2020 SuperHouse Automation Pty Ltd <www.superhouse.tv>  
 Designed by Jonathan Oxer
 
 Connects to an electric wheelchair controller, and emulates the signls
 from a wheelchair joystick so that the chair can be controlled
 electronically. Provides an I2C interface for connection to a host
 microcontroller.
+
+![PCB render](CHAIRI2C-v1_0-oblique-render.jpg)
 
 Features:
 

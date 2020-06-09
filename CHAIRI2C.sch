@@ -1717,6 +1717,80 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 </deviceset>
 </devicesets>
 </library>
+<library name="SuperHouse-Symbols" urn="urn:adsk.eagle:library:13228893">
+<packages>
+<package name="FIDUCIAL-1.5X3" urn="urn:adsk.eagle:footprint:13228896/1" library_version="1">
+<circle x="0" y="0" radius="0.9055" width="1.27" layer="29"/>
+<smd name="1" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="FIDUCIAL-1X2" urn="urn:adsk.eagle:footprint:13228895/1" library_version="1">
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="FIDUCIAL-1X2.5" urn="urn:adsk.eagle:footprint:13228894/1" library_version="1">
+<circle x="0" y="0" radius="0.9" width="1.27" layer="29"/>
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="FIDUCIAL-1.5X3" urn="urn:adsk.eagle:package:13228900/1" type="box" library_version="1">
+<packageinstances>
+<packageinstance name="FIDUCIAL-1.5X3"/>
+</packageinstances>
+</package3d>
+<package3d name="FIDUCIAL-1X2" urn="urn:adsk.eagle:package:13228899/1" type="box" library_version="1">
+<packageinstances>
+<packageinstance name="FIDUCIAL-1X2"/>
+</packageinstances>
+</package3d>
+<package3d name="FIDUCIAL-1X2.5" urn="urn:adsk.eagle:package:13228898/1" type="box" library_version="1">
+<packageinstances>
+<packageinstance name="FIDUCIAL-1X2.5"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="FIDUCIAL" urn="urn:adsk.eagle:symbol:13228897/1" library_version="1">
+<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FIDUCIAL" urn="urn:adsk.eagle:component:13228901/1" library_version="1">
+<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
+Various fiducial points for machine vision alignment.</description>
+<gates>
+<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1.5X3" package="FIDUCIAL-1.5X3">
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:13228900/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1X2" package="FIDUCIAL-1X2">
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:13228899/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1X2.5" package="FIDUCIAL-1X2.5">
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:13228898/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1763,6 +1837,8 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="R10" library="SuperHouse-DiscreteSemi" library_urn="urn:adsk.eagle:library:11768461" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:11768543/2" value="22K"/>
 <part name="U$2" library="SuperHouse-Jumpers" library_urn="urn:adsk.eagle:library:12190622" deviceset="SJC" device="-NORMAL" package3d_urn="urn:adsk.eagle:package:7066342/1" value="PU"/>
 <part name="U$3" library="SuperHouse-Jumpers" library_urn="urn:adsk.eagle:library:12190622" deviceset="SJC" device="-NORMAL" package3d_urn="urn:adsk.eagle:package:7066342/1" value="PU"/>
+<part name="U$8" library="SuperHouse-Symbols" library_urn="urn:adsk.eagle:library:13228893" deviceset="FIDUCIAL" device="1X2.5" package3d_urn="urn:adsk.eagle:package:13228898/1"/>
+<part name="U$9" library="SuperHouse-Symbols" library_urn="urn:adsk.eagle:library:13228893" deviceset="FIDUCIAL" device="1X2.5" package3d_urn="urn:adsk.eagle:package:13228898/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -1772,16 +1848,16 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <text x="142.24" y="20.32" size="3.048" layer="94">Chair Control I2C Interface</text>
 <text x="172.72" y="14.478" size="1.778" layer="94">V1.0 (2020-05-05)</text>
 <text x="142.24" y="14.478" size="1.778" layer="94">SKU: CHAIRI2C</text>
-<text x="141.986" y="9.398" size="1.778" layer="94">(C)2018-2020 SuperHouse Automation: www.superhouse.tv</text>
+<text x="141.986" y="9.398" size="1.778" layer="94">(C)2020 SuperHouse Automation: www.superhouse.tv</text>
 <text x="141.986" y="6.35" size="1.778" layer="94">Licensed under the TAPR Open Hardware License: www.tapr.org/ohl</text>
 <text x="202.946" y="14.478" size="1.778" layer="94">www.superhouse.tv/chairi2c</text>
-<text x="66.04" y="50.8" size="2.54" layer="94" ratio="12">Power / Status</text>
+<text x="66.04" y="50.8" size="2.54" layer="94" ratio="12">Power Indicators</text>
 <frame x1="139.7" y1="12.7" x2="243.84" y2="25.4" columns="0" rows="0" layer="94" border-left="no" border-top="no" border-right="no" border-bottom="no"/>
 <frame x1="139.7" y1="12.7" x2="170.18" y2="17.78" columns="8" rows="5" layer="94"/>
 <frame x1="170.18" y1="12.7" x2="200.66" y2="17.78" columns="8" rows="5" layer="94"/>
 <frame x1="139.7" y1="5.08" x2="243.84" y2="17.78" columns="0" rows="0" layer="94" border-left="no" border-top="no" border-right="no" border-bottom="no"/>
-<text x="71.12" y="106.68" size="2.54" layer="94" ratio="12">Direction Control</text>
-<text x="71.12" y="162.56" size="2.54" layer="94" ratio="12">Speed Control</text>
+<text x="71.12" y="106.68" size="2.54" layer="94" ratio="12">Direction Control (X Axis)</text>
+<text x="71.12" y="162.56" size="2.54" layer="94" ratio="12">Speed Control (Y Axis)</text>
 <text x="167.64" y="139.7" size="2.54" layer="94" ratio="12">Chair Interface</text>
 <wire x1="129.54" y1="119.38" x2="129.54" y2="167.64" width="0.3048" layer="97" style="longdash"/>
 <wire x1="129.54" y1="167.64" x2="66.04" y2="167.64" width="0.3048" layer="97" style="longdash"/>
@@ -1938,6 +2014,8 @@ desired input, ie: approx 5-7V with 6V as the center.</text>
 <attribute name="NAME" x="43.18" y="124.46" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="49.53" y="124.46" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="U$8" gate="G$1" x="238.76" y="27.94" smashed="yes"/>
+<instance part="U$9" gate="G$1" x="233.68" y="27.94" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -2015,23 +2093,21 @@ desired input, ie: approx 5-7V with 6V as the center.</text>
 <net name="SPEED_OUT" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="RW"/>
-<wire x1="109.22" y1="142.24" x2="149.86" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="142.24" x2="137.16" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="X1" gate="G$1" pin="1"/>
-<label x="149.86" y="116.84" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="149.86" y1="116.84" x2="198.12" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="142.24" x2="149.86" y2="116.84" width="0.1524" layer="91"/>
-<junction x="149.86" y="116.84"/>
+<wire x1="137.16" y1="116.84" x2="198.12" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="142.24" x2="137.16" y2="116.84" width="0.1524" layer="91"/>
+<label x="167.64" y="116.84" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DIRECTION_OUT" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="2"/>
-<label x="149.86" y="114.3" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="IC2" gate="G$1" pin="RW"/>
-<wire x1="149.86" y1="114.3" x2="198.12" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="86.36" x2="149.86" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="114.3" x2="149.86" y2="86.36" width="0.1524" layer="91"/>
-<junction x="149.86" y="114.3"/>
+<wire x1="137.16" y1="114.3" x2="198.12" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="86.36" x2="137.16" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="114.3" x2="137.16" y2="86.36" width="0.1524" layer="91"/>
+<label x="167.64" y="114.3" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VREF" class="0">
@@ -2083,11 +2159,21 @@ desired input, ie: approx 5-7V with 6V as the center.</text>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="116.84" y1="157.48" x2="116.84" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="12V"/>
+<pinref part="IC1" gate="G$1" pin="VBIAS"/>
+<wire x1="109.22" y1="147.32" x2="111.76" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="147.32" x2="111.76" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="160.02" x2="116.84" y2="160.02" width="0.1524" layer="91"/>
+<junction x="116.84" y="160.02"/>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="116.84" y1="101.6" x2="116.84" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="U$6" gate="G$1" pin="12V"/>
+<pinref part="IC2" gate="G$1" pin="VBIAS"/>
+<wire x1="109.22" y1="91.44" x2="111.76" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="91.44" x2="111.76" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="104.14" x2="116.84" y2="104.14" width="0.1524" layer="91"/>
+<junction x="116.84" y="104.14"/>
 </segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
@@ -2114,13 +2200,8 @@ desired input, ie: approx 5-7V with 6V as the center.</text>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="VBIAS"/>
-<wire x1="109.22" y1="147.32" x2="111.76" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="147.32" x2="111.76" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="RH"/>
-<wire x1="111.76" y1="144.78" x2="109.22" y2="144.78" width="0.1524" layer="91"/>
-<junction x="111.76" y="144.78"/>
-<wire x1="111.76" y1="144.78" x2="116.84" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="144.78" x2="116.84" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="116.84" y1="144.78" x2="116.84" y2="147.32" width="0.1524" layer="91"/>
 </segment>
@@ -2135,13 +2216,8 @@ desired input, ie: approx 5-7V with 6V as the center.</text>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="VBIAS"/>
-<wire x1="109.22" y1="91.44" x2="111.76" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="91.44" x2="111.76" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="RH"/>
-<wire x1="111.76" y1="88.9" x2="109.22" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="88.9" x2="116.84" y2="88.9" width="0.1524" layer="91"/>
-<junction x="111.76" y="88.9"/>
+<wire x1="109.22" y1="88.9" x2="116.84" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="116.84" y1="88.9" x2="116.84" y2="91.44" width="0.1524" layer="91"/>
 </segment>
@@ -2263,32 +2339,6 @@ desired input, ie: approx 5-7V with 6V as the center.</text>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="104,1,111.76,83.82,J1,VBUS,USB+,,,"/>
-<approved hash="208,1,35.56,116.84,5V,out,,,,"/>
-<approved hash="208,1,38.1,119.38,5V,sup,,,,"/>
-<approved hash="208,1,165.1,119.38,5V,sup,,,,"/>
-<approved hash="208,1,182.88,167.64,5V,sup,,,,"/>
-<approved hash="208,1,129.54,22.86,5V,sup,,,,"/>
-<approved hash="208,1,177.8,104.14,5V,sup,,,,"/>
-<approved hash="208,1,238.76,167.64,5V,sup,,,,"/>
-<approved hash="208,1,76.2,73.66,5V,sup,,,,"/>
-<approved hash="208,1,81.28,76.2,5V,sup,,,,"/>
-<approved hash="208,1,35.56,33.02,5V,sup,,,,"/>
-<approved hash="106,1,228.6,109.22,A5,,,,,"/>
-<approved hash="106,1,228.6,40.64,D0,,,,,"/>
-<approved hash="106,1,228.6,43.18,D1,,,,,"/>
-<approved hash="106,1,228.6,35.56,D3_SCL,,,,,"/>
-<approved hash="106,1,228.6,45.72,D4_A6,,,,,"/>
-<approved hash="106,1,228.6,83.82,D5,,,,,"/>
-<approved hash="106,1,228.6,53.34,D6_A8,,,,,"/>
-<approved hash="106,1,228.6,88.9,D7_AIN0,,,,,"/>
-<approved hash="106,1,228.6,68.58,D8_A9,,,,,"/>
-<approved hash="106,1,228.6,71.12,D9_A10,,,,,"/>
-<approved hash="106,1,228.6,76.2,D11,,,,,"/>
-<approved hash="106,1,228.6,50.8,D12,,,,,"/>
-<approved hash="106,1,228.6,91.44,HWB,,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>
