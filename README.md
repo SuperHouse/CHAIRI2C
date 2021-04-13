@@ -10,7 +10,7 @@ microcontroller.
 
 Also exposes the "5th Button" and 12V 100mA chair power connections.
 
-![PCB render](CHAIRI2C-v1_0-oblique-render.jpg)
+![PCB render](Images/CHAIRI2C-v1_0-oblique-render.jpg)
 
 Features:
 
