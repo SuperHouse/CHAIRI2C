@@ -4,13 +4,13 @@ Copyright 2020 SuperHouse Automation Pty Ltd <www.superhouse.tv>
 Designed by Jonathan Oxer
 
 Connects to a Permobil electric wheelchair controller, and emulates the
-signls from a wheelchair joystick so that the chair can be controlled
+signals from a wheelchair joystick so that the chair can be controlled
 electronically. Provides an I2C interface for connection to a host
 microcontroller.
 
 Also exposes the "5th Button" and 12V 100mA chair power connections.
 
-![PCB render](Images/CHAIRI2C-v1_0-oblique-render.jpg)
+![PCB](Images/CHAIRI2C-v1_0-oblique.jpg)
 
 Features:
 
